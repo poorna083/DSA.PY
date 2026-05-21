@@ -1,12 +1,16 @@
 def movezerolast(nums):
-    i = 0   
+    res=[]
+    count=0
+    for i in nums:
+        if i != 0:
+            res.append(i)
+        else:
+            count+=1
 
-    for j in range(len(nums)):
-        if nums[j] != 0:
-            nums[i], nums[j] = nums[j], nums[i]
-            i += 1
+    for i in range(count):
+        res.append(0)
 
-    return nums
+    return res
 
 
 nums = eval(input("Enter the list : "))
